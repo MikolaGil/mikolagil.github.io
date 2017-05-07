@@ -1,0 +1,135 @@
+@height:29px;
+@fontArial:Arial, Helvetica, sans-serif;
+@fontMyriad:'MyriadProRegular', @fontArial;
+@black:#000000;
+@white:#ffffff;
+@fontColor:#7d7e7d;
+@fontbold:700;
+@gradient:linear-gradient(to bottom, #4a0101, #c40307);
+.animation-ring{
+  animation-name: call-me;
+  animation-delay: 2s;
+  animation-duration: 7s;
+}
+.animation-numbers{
+  animation-name: scale-phrase;
+  animation-delay: 2s;
+  animation-duration: 7s;
+}
+///////////////////////////////
+.search {
+  background-color: @black;
+
+  &__phrase {
+    display: inline-block;
+    font-family: @fontMyriad;
+    font-size: 14px;
+    padding-top: 26px;
+    text-transform: uppercase;
+    color: @fontColor;
+  }
+  &__form {
+    float: right;
+    margin-top: 8px;
+    line-height: 33px;
+  }
+  &__input_style {
+    height: @height;
+    box-sizing: border-box;
+    background-color: #333333;
+    color: #e8e3e3;
+  }
+  &__button_style {
+    height: @height;
+    width: 63px;
+    margin-left: -4px;
+    background: @gradient;
+    font-size: 14px;
+    font-family: @fontArial;
+    font-weight: @fontbold;
+    color: #e4d1d2;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+.contacts{
+  position: relative;
+  height: 140px;
+
+  &__logo{
+    padding-top: 26px;
+  }
+  &__img{
+    .animation-ring;
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 200px;
+  }
+  &__style{
+    padding-top: 21px;
+    list-style: none;
+    width: 194px;
+    line-height: 1.5;
+    text-align: right;
+    float: right;
+    font-family: @fontArial;
+
+    &_call{
+      color: #e50206;
+      text-align: left;
+      padding-left: 15px;
+      font-size: 14px;
+      font-weight: @fontbold;
+      text-transform: uppercase;
+    }
+    &_number{
+      .animation-numbers;
+      color: @white;
+      font-size: 24px;
+      font-weight: @fontbold;
+
+    }
+    &_work-time,
+    &_weekend-time,
+    &_sunday-time{
+      font-size: 11px;
+      color: #8a8989;
+    }
+  }
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  box-sizing: content-box;
+
+
+  &__item > li{
+    flex: 1 0 auto;
+    background-color: #1f1f1f;
+    height: 83px;
+    border-right: 1px solid @black;
+    font-size: 14px;
+    font-family: @fontArial;
+
+    &:last-child{
+      border-right: none;
+    }
+    & > a{
+      width: 100%;
+      display: block;
+      height: 74px;
+      color: #b5b3b3;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      margin:auto;
+      padding: 27px 5px 0 5px;
+    }
+    &:hover{
+      background-color: #ba0103;
+    }
+  }
+}

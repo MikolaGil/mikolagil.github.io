@@ -1,0 +1,30 @@
+@imgHeader:"../Pages/page_main/header/images";
+@imgFooter:"../Pages/page_main/footer/images";
+@imgMobile:"../Pages/page_mobile/images/mobile_background.jpg";
+
+.background{
+  &__header {
+    background: url("@{imgHeader}/header-background.jpg") repeat-x;
+  }
+  &__footer{
+    background: url("@{imgFooter}/footer-background.jpg") repeat-x;
+    height: 418px;
+  }
+}
+
+.nav__item li > a{
+  background-image:url("@{imgHeader}/nav-background.jpg");
+}
+
+.mobile{
+  &__header{
+    background-image: url(@imgMobile);
+  }
+ & input:checked + label,
+ & input:checked + label:hover {
+    background-image: url(@imgMobile);
+  }
+  & label{
+    background-image: url(@imgMobile);
+  }
+}

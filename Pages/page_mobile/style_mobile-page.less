@@ -1,0 +1,182 @@
+.mobile {
+  &_wrapper {
+    width: 100%;
+    background-color: #860000;
+  }
+  & h2{
+    text-decoration:underline;
+    text-shadow: 2px 2px 3px #75a0a4;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  &__header {
+    margin-top: -5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #b5b3b3;
+    height: auto;
+    padding-top: 5px;
+    font-size: 30px;
+    text-align: center;
+
+    &_content {
+      height: 180px;
+
+      & p {
+        background-color: #93a49a;
+        height: 100%;
+        font-size: 30px;
+        font-style: italic;
+      }
+    }
+  }
+  &__header-content_style {
+    background-color: #93a49a;
+    height: 100%;
+    margin-top: -20px;
+  }
+  &__number_style {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: #dbd3db;
+  }
+  &__sale {
+    &_top {
+      color: #2aabd2;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 900;
+      font-size: 50px;
+      text-align: center;
+      animation-name: sale_color;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+    &_content {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #a40506;
+      font-size: 40px;
+
+      font-weight: 700;
+      padding-left: 5%;
+      animation-name: sale_move;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+  }
+  &__img {
+    margin: 0 0 5px 15px;
+    color: #ffffff;
+  }
+  &__work-time_style,
+  &__weekend-time_style,
+  &__sunday-time_style {
+    display: block;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  & label {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 3px solid #860000;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 10px;
+    position: relative;
+    z-index: 2;
+    display: block;
+    height: 70px;
+    cursor: pointer;
+    color: #b5b3b3;
+    font-size: 35px;
+  }
+  & input:checked + label {
+    &:hover{
+    color: #b5b3b3;
+  }
+}
+  & label:hover:after,
+  & input:checked + label:hover:after{
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 13px;
+    top: 7px;
+  }
+  & input{
+    display: none;
+  }
+  & article{
+    background: #ffffff;
+    margin-top: -1px;
+    overflow: hidden;
+    height: 0;
+    position: relative;
+    z-index: 1;
+    transition: height 0.5s ease-in-out;
+  }
+  & input:checked ~ article{
+    transition: height 0.7s ease-in-out;
+  }
+  .mobile-image_style{
+    margin-top: 10px;
+    width: 100%;
+  }
+  & input:checked ~ article.mobile__header_content{
+    height: 180px;
+  }
+  &__information{
+    background-color: #93a49a;
+    height: 100%;
+  }
+  &__content_paragraph{
+    font-size: 25px;
+    font-weight: 700;
+    text-align: justify;
+    text-shadow: 2px 2px 3px #75a0a4;
+  }
+  &__footer{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to bottom, #93a49a, #0e010a);
+    word-wrap: normal;
+
+    & a{
+      text-decoration: none;
+      font-size: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+      margin-left: 10%;
+      text-align: justify;
+
+      &:hover{
+        text-decoration: none;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.dropdown-mobile{
+  display: block;
+  height: 45px;
+  width:100%;
+  padding-top: 5px;
+  border-bottom: 2px solid #860000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #474747;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #93a49a;
+
+  &:visited{
+    color: #474747;
+  }
+  &:hover{
+    text-decoration: none;
+    color: #474747;
+  }
+}

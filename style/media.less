@@ -1,0 +1,56 @@
+@minMobile:320px;
+@maxMobile:480px;
+@minTablet:481px;
+@maxTablet:640px;
+
+@media all and (min-width : @minMobile) and (max-width : @maxMobile){
+  .background__header {
+    display: none;
+  }
+}
+
+@media all and (min-width : @minTablet) and (max-width : 750px) {
+  .content__sale {
+    &_top-left,
+    &_top-right,
+    &_bottom-left,
+    &_bottom-right {
+      width: 90%;
+      margin-left: 5%;
+    }
+    &_anchor{
+      text-align: center;
+    }
+  }
+  #dropdownMenuButton {
+    display: none;
+  }
+}
+@media all and (min-width : @minTablet) and (max-width : @maxTablet) {
+
+  #myCarousel{
+    display: none;
+  }
+  .content{
+    margin-top: -10px;
+  }
+  .contacts{
+    display: none;
+  }
+  .search__form{
+    display: none;
+  }
+  .footer__right-list{
+    display: none;
+  }
+}
+@media all and (min-width : @maxMobile) {
+  .mobile {
+    display: none;
+  }
+}
+#myCarousel{
+  margin-top: -10px;
+}
+
+

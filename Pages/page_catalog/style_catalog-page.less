@@ -1,0 +1,88 @@
+@fontArial:Arial, Helvetica, sans-serif;
+@smFont:12px;
+@mdFont:14px;
+@lgFont:18px;
+@bold:700;
+@black:#000000;
+@white:#ffffff;
+@grey:#7d7e7d;
+@gradient:linear-gradient(to bottom, #c80308, #720202);
+@gradientHover:linear-gradient(to bottom, #720202, #c80308);
+///////////////////////
+.content{
+
+    &__catalog{
+      display: inline;
+      background-color: #ebebeb;
+      width: 710px;
+      margin: 10px 0 0 15px;
+
+    & h3{
+      margin: 10px 0 20px 0;
+    }
+  }
+  &__headline_anchor{
+    text-decoration: none;
+    color: #d5d5d5;
+    font-family: @fontArial;
+    font-size: @mdFont;
+    font-weight: @bold;
+    text-transform: uppercase;
+    margin-left: 20px;
+    padding-right: 5px;
+    border-right: 2px solid @grey;
+
+    &:hover{
+      text-decoration: none;
+      cursor: pointer;
+      color: @grey;
+    }
+    &:visited{
+      text-decoration: none;
+      cursor: pointer;
+      color: @grey;
+    }
+  }
+  &__headline_text{
+    font-family: @fontArial;
+    font-size: @mdFont;
+    font-weight: @bold;
+    text-transform: uppercase;
+    color: #818080;
+  }
+
+  &__table{
+    margin-left: 12px;
+
+    & tr td{
+      width: 210px;
+      height: 130px;
+      border-bottom: 30px solid #ebebeb;
+      border-right: 30px solid #ebebeb;;
+      vertical-align: bottom;
+
+        &:last-child{
+          border-right: none;
+        }
+    }
+    &_description span {
+      vertical-align: bottom;
+      text-align: center;
+      display: block;
+      height: 35px;
+      background: @gradient;
+
+      & a{
+        font-family: @fontArial;
+        font-size: @smFont;
+        font-weight:@bold;
+        color: @white;
+        text-decoration: none;
+      }
+      &:hover{
+        background: @gradientHover;
+        cursor: pointer;
+      }
+    }
+  }
+}
