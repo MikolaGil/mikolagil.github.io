@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Privacy policy for the MeowCounter Android app.">
+<title>MeowCounter Privacy Policy</title>
+<link rel="icon" href="icon.png">
+<style>
+  :root {
+    --bg: #fdf9fb;
+    --surface: #ffffff;
+    --surface-border: #ecdfe6;
+    --text: #241318;
+    --text-muted: #7a6570;
+    --text-faint: #a4919a;
+    --accent: #d63b73;
+    --accent-soft: #fbe3ec;
+    --accent-soft-border: #f3c6d8;
+    --rule: #ecdfe6;
+    --link: #b62e60;
+    --focus: #d63b73;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #180f14;
+      --surface: #1f1519;
+      --surface-border: #34222a;
+      --text: #f4e9ee;
+      --text-muted: #bb9ca8;
+      --text-faint: #8a6f78;
+      --accent: #ff7aab;
+      --accent-soft: #33202a;
+      --accent-soft-border: #4a2c39;
+      --rule: #34222a;
+      --link: #ff9dc0;
+      --focus: #ff7aab;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #180f14;
+    --surface: #1f1519;
+    --surface-border: #34222a;
+    --text: #f4e9ee;
+    --text-muted: #bb9ca8;
+    --text-faint: #8a6f78;
+    --accent: #ff7aab;
+    --accent-soft: #33202a;
+    --accent-soft-border: #4a2c39;
+    --rule: #34222a;
+    --link: #ff9dc0;
+    --focus: #ff7aab;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 1.0625rem;
+    line-height: 1.68;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .chrome, h1, h2, h3, .label, nav, .meta, .callout-title, header .tag {
+    font-family: "Baloo 2", "Segoe UI", system-ui, sans-serif;
+  }
+
+  a { color: var(--link); text-decoration-thickness: 1.5px; text-underline-offset: 2px; }
+  a:focus-visible, button:focus-visible { outline: 2.5px solid var(--focus); outline-offset: 3px; border-radius: 3px; }
+
+  .page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+
+  header.masthead {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+
+  .paw {
+    width: 40px;
+    height: 40px;
+    flex: none;
+  }
+
+  header .tag {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 1.6rem + 1.6vw, 2.6rem);
+    font-weight: 700;
+    margin: 10px 0 6px;
+    line-height: 1.12;
+    text-wrap: balance;
+  }
+
+  .meta {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+
+  .callout {
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-soft-border);
+    border-radius: 14px;
+    padding: 24px 28px;
+    margin-bottom: 48px;
+  }
+
+  .callout-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+
+  .callout ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+  }
+
+  .callout li {
+    padding-left: 22px;
+    position: relative;
+    font-size: 0.98rem;
+  }
+
+  .callout li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 7px;
+    height: 7px;
+    border-radius: 2px;
+    background: var(--accent);
+    transform: rotate(45deg);
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  nav.toc {
+    position: sticky;
+    top: 32px;
+  }
+
+  nav.toc .label {
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    margin-bottom: 14px;
+  }
+
+  nav.toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: toc;
+    display: grid;
+    gap: 2px;
+  }
+
+  nav.toc li { counter-increment: toc; }
+
+  nav.toc a {
+    display: block;
+    padding: 7px 0 7px 22px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    position: relative;
+    border-left: 2px solid transparent;
+  }
+
+  nav.toc a::before {
+    content: counter(toc, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.72rem;
+    color: var(--text-faint);
+  }
+
+  nav.toc a:hover { color: var(--text); }
+
+  main { min-width: 0; }
+
+  section {
+    padding-top: 40px;
+    margin-top: 40px;
+    border-top: 1px solid var(--rule);
+    scroll-margin-top: 24px;
+  }
+
+  section:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+
+  h2 {
+    font-size: 1.32rem;
+    font-weight: 700;
+    margin: 0 0 16px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    text-wrap: balance;
+  }
+
+  h2 .num {
+    font-size: 0.78rem;
+    color: var(--accent);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  h3 {
+    font-family: "Baloo 2", "Segoe UI", system-ui, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 24px 0 8px;
+  }
+
+  p { margin: 0 0 16px; max-width: 66ch; }
+  p:last-child { margin-bottom: 0; }
+
+  ul.plain, ol.plain {
+    margin: 0 0 16px;
+    padding-left: 1.25em;
+    display: grid;
+    gap: 8px;
+    max-width: 64ch;
+  }
+
+  strong { font-weight: 700; }
+
+  .table-wrap { overflow-x: auto; margin: 4px 0 20px; border: 1px solid var(--surface-border); border-radius: 12px; }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 560px;
+    font-family: "Baloo 2", "Segoe UI", system-ui, sans-serif;
+    font-size: 0.88rem;
+    background: var(--surface);
+  }
+
+  th, td {
+    text-align: left;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--surface-border);
+    vertical-align: top;
+  }
+
+  thead th {
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    background: var(--accent-soft);
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+  td.perm { font-weight: 600; white-space: nowrap; color: var(--text); }
+  td.why { font-family: "Source Serif 4", Georgia, serif; font-size: 0.96rem; color: var(--text-muted); }
+
+  footer.page-footer {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 0.86rem;
+    color: var(--text-muted);
+  }
+
+  footer.page-footer a { color: var(--link); font-weight: 600; }
+
+  @media (max-width: 780px) {
+    .layout { grid-template-columns: 1fr; gap: 8px; }
+    nav.toc { position: static; margin-bottom: 40px; }
+    nav.toc ol { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    section { animation: rise 0.4s ease-out backwards; }
+    section:nth-of-type(1) { animation-delay: 0s; }
+    section:nth-of-type(2) { animation-delay: 0.02s; }
+  }
+  @keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="page">
+  <header class="masthead">
+    <svg class="paw" viewBox="0 0 48 48" aria-hidden="true">
+      <ellipse cx="24" cy="31" rx="12.5" ry="10.5" fill="var(--accent)"/>
+      <ellipse cx="9" cy="16" rx="5.2" ry="6.4" fill="var(--accent)"/>
+      <ellipse cx="22" cy="9" rx="5.4" ry="6.8" fill="var(--accent)"/>
+      <ellipse cx="35" cy="12" rx="5.2" ry="6.6" fill="var(--accent)"/>
+      <ellipse cx="43" cy="24" rx="4.6" ry="5.8" fill="var(--accent)"/>
+    </svg>
+    <span class="tag">MeowCounter</span>
+  </header>
+
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective September 14, 2026 · Applies to the MeowCounter Android app</p>
+
+  <div class="callout">
+    <div class="callout-title">In short</div>
+    <ul>
+      <li>Your cat's meows are analyzed entirely on your phone — audio is never recorded, saved, or sent anywhere.</li>
+      <li>Meow counts, your cat's profile, and vet visit notes stay in local storage on your device only.</li>
+      <li>Free users see ads served by Google AdMob, which collects device identifiers for ad delivery.</li>
+      <li>The one-time "Remove Ads" purchase is billed and processed entirely by Google Play.</li>
+      <li>You can erase all app data at any time from Settings → Reset Data, or by uninstalling the app.</li>
+    </ul>
+  </div>
+
+  <div class="layout">
+    <nav class="toc" aria-label="Sections">
+      <div class="label">Contents</div>
+      <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#microphone">Microphone &amp; audio</a></li>
+        <li><a href="#local-data">Data on your device</a></li>
+        <li><a href="#ads">Advertising</a></li>
+        <li><a href="#purchases">Purchases</a></li>
+        <li><a href="#permissions">Permissions</a></li>
+        <li><a href="#children">Children's privacy</a></li>
+        <li><a href="#control">Your controls</a></li>
+        <li><a href="#changes">Changes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <main>
+      <section id="overview">
+        <h2><span class="num">01</span> Overview</h2>
+        <p>MeowCounter is a listening app: it counts how often your cat meows by analyzing the pitch of sounds picked up by your phone's microphone, entirely on the device itself. There is no cloud service, no speech-recognition API, and no server that MeowCounter talks to for the purpose of detecting meows. This policy explains what little data the app does handle, and why.</p>
+      </section>
+
+      <section id="microphone">
+        <h2><span class="num">02</span> Microphone &amp; audio</h2>
+        <p>When you tap <strong>Listen</strong>, MeowCounter opens your microphone and runs a lightweight pitch-detection routine over the incoming audio in memory, in real time, entirely on your device.</p>
+        <ul class="plain">
+          <li>Audio is <strong>never written to a file</strong>, never buffered beyond the fraction of a second needed to estimate pitch, and never recorded for playback.</li>
+          <li>Audio is <strong>never transmitted</strong> over the network, to us or to anyone else.</li>
+          <li>No cloud speech recognition, voice-print, or machine-learning service is used at any point — the entire detector runs locally.</li>
+        </ul>
+        <p>What the app keeps is the <em>result</em> of that analysis — the moment a meow was detected — not the sound itself.</p>
+      </section>
+
+      <section id="local-data">
+        <h2><span class="num">03</span> Data on your device</h2>
+        <p>MeowCounter stores the following directly on your phone, using a local database and local preferences. None of it is uploaded, backed up to a server, or linked to an account, because MeowCounter has no accounts and no cloud sync.</p>
+        <ul class="plain">
+          <li><strong>Meow events</strong> — a timestamp each time a meow is detected, used to build your Statistics view.</li>
+          <li><strong>Cat profile</strong> — name, age, and sex, only if you choose to fill these in under Settings.</li>
+          <li><strong>Vet visit log</strong> — dates and notes you choose to add, if you use that feature.</li>
+          <li><strong>App preferences</strong> — detection sensitivity and whether you've purchased Remove Ads.</li>
+        </ul>
+      </section>
+
+      <section id="ads">
+        <h2><span class="num">04</span> Advertising</h2>
+        <p>Unless you've purchased Remove Ads, MeowCounter shows banner and interstitial ads through <strong>Google AdMob</strong> (part of the Google Mobile Ads SDK). To select and measure ads, AdMob may collect identifiers such as your device's Advertising ID, IP-based general location, and app interaction data. This collection is governed by Google's own privacy practices, not MeowCounter's servers — we don't operate any ad infrastructure ourselves.</p>
+        <p>Read Google's policy at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>, and its ad-specific terms at <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a>.</p>
+      </section>
+
+      <section id="purchases">
+        <h2><span class="num">05</span> Purchases</h2>
+        <p>The one-time <strong>Remove Ads</strong> purchase is handled entirely by <strong>Google Play Billing</strong>. When you buy it, your payment details go directly to Google Play — MeowCounter never sees, collects, or stores your card number or billing address. We only receive confirmation that the purchase succeeded, which we store locally to unlock the Pro features on your device.</p>
+      </section>
+
+      <section id="permissions">
+        <h2><span class="num">06</span> Permissions</h2>
+        <p>MeowCounter requests the following Android permissions. Each exists to make listening for meows work reliably — none are used to gather data for any other purpose.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Permission</th><th>What it's for</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="perm">Microphone</td><td class="why">Required to detect meows — see "Microphone &amp; audio" above.</td></tr>
+              <tr><td class="perm">Foreground service</td><td class="why">Keeps listening running reliably, including overnight, and shows a persistent notification while it does.</td></tr>
+              <tr><td class="perm">Notifications</td><td class="why">Displays that ongoing "listening" notification required by Android for foreground services.</td></tr>
+              <tr><td class="perm">Wake lock</td><td class="why">Prevents the CPU from sleeping mid-detection during a long listening session.</td></tr>
+              <tr><td class="perm">Ignore battery optimizations</td><td class="why">Optional; stops Android from pausing the listening service to save power during long sessions.</td></tr>
+              <tr><td class="perm">Network access</td><td class="why">Used only to fetch and report on ads (see "Advertising") and to process purchases.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="children">
+        <h2><span class="num">07</span> Children's privacy</h2>
+        <p>MeowCounter is not directed at children under 13, and we do not knowingly collect personal information from children. The app's own local data (meow counts, cat profile) never leaves the device regardless of who uses it.</p>
+      </section>
+
+      <section id="control">
+        <h2><span class="num">08</span> Your controls</h2>
+        <p>Because everything MeowCounter stores lives on your device, you're always in control of it:</p>
+        <ul class="plain">
+          <li>Open <strong>Settings → Reset Data</strong> to permanently erase every meow count, cat profile field, and vet visit entry.</li>
+          <li>Uninstalling the app removes all of its local data along with it.</li>
+          <li>Revoke the microphone permission at any time from Android's app settings — MeowCounter simply won't be able to detect meows until it's granted again.</li>
+        </ul>
+      </section>
+
+      <section id="changes">
+        <h2><span class="num">09</span> Changes to this policy</h2>
+        <p>If MeowCounter's data practices change — for example, a new feature that handles data differently — this page will be updated and the effective date above will change accordingly. We encourage checking back occasionally if you'd like to stay current.</p>
+      </section>
+
+      <section id="contact">
+        <h2><span class="num">10</span> Contact</h2>
+        <p>Questions about this policy or how MeowCounter handles data can be sent to <a href="mailto:mikolagil@gmail.com">mikolagil@gmail.com</a>.</p>
+      </section>
+
+      <footer class="page-footer">
+        <span>MeowCounter — on-device meow detection, nothing more.</span>
+        <a href="mailto:mikolagil@gmail.com">mikolagil@gmail.com</a>
+      </footer>
+    </main>
+  </div>
+</div>
+
+</body>
+</html>
